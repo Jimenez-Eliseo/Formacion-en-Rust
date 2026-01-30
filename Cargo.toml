@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+
+[[bin]]
+name = "queue"
+path = "src/bin/semana02/DS-02_Queue(Cola)_v0.2.0/main.rs"
