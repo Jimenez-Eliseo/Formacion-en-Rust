@@ -8,3 +8,7 @@ edition = "2024"
 [[bin]]
 name = "queue"
 path = "src/bin/semana02/DS-02_Queue(Cola)_v0.2.0/main.rs"
+
+[[bin]]
+name = "bst"
+path = "src/bin/semana02/DS-04_Binary_Search_Tree_v0.2.0/main.rs"
