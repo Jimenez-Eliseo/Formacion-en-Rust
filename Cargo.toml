@@ -12,3 +12,7 @@ path = "src/bin/semana02/DS-02_Queue(Cola)_v0.2.0/main.rs"
 [[bin]]
 name = "bst"
 path = "src/bin/semana02/DS-04_Binary_Search_Tree_v0.2.0/main.rs"
+
+[[bin]]
+name = "mergesort"
+path = "src/bin/semana02/ALG-02_Merge_Sort_v0.2.0/main.rs"
