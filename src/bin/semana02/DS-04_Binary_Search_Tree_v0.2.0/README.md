@@ -1,6 +1,6 @@
 # Como probar los test de BST
 
-Si todo el proycto esta clonado se usara el siguiente comando:
+Si todo el proyecto esta clonado se usara el siguiente comando:
 
 ```
 cargo test --bin bst -- --nocapture

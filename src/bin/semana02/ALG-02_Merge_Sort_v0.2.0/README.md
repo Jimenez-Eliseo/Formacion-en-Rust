@@ -10,7 +10,9 @@ Caso contrario tendras que de clarar un objetivo para poder compilar tu archivo 
 
 > [!TIP]
 > [[bin]]
+>
 > name = "nombre_que_quieres_poner_como_etiqueta"
+>
 > path = "RUTA/HACIA/TU/main.rs"
 
 Y usar el comando siguiente:

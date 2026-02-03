@@ -1,6 +1,6 @@
 ## Como probar los test de este Queue
 
-Si todo el proycto esta clonado se usara el siguiente comando:
+Si todo el proyecto esta clonado se usara el siguiente comando:
 
 ```
 cargo test --bin queue -- --nocapture
@@ -10,7 +10,9 @@ Caso contrario tendras que de clarar un objetivo para poder compilar tu archivo 
 
 > [!TIP]
 > [[bin]]
+>
 > name = "nombre_que_quieres_poner_como_etiqueta"
+>
 > path = "RUTA/HACIA/TU/main.rs"
 
 Y usar el comando siguiente:
