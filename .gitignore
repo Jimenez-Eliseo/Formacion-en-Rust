@@ -1,2 +1,2 @@
-#Ignoramos la carpeta target
-/target/
+#Ignoramos la carpeta target todo el proyecto
+target/
