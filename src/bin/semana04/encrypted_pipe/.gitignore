@@ -1,0 +1,8 @@
+/target
+
+.env
+
+./certs/*.crt
+./certs/*.key
+./certs/*.srl
+./certs/*.conf

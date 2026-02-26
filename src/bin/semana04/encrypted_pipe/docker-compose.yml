@@ -1,0 +1,37 @@
+
+services:
+  postgres:
+    image: postgres:16.0  
+    container_name: postgres_ssl
+    environment:
+      POSTGRES_USER: mi_usuario        
+      POSTGRES_PASSWORD: mi_contrasena  
+      POSTGRES_DB: mi_basedatos
+    volumes:  
+      - ./certs/server.crt:/var/lib/postgresql/server.crt
+      - ./certs/server.key:/var/lib/postgresql/server.key
+      - ./certs/ca.crt:/var/lib/postgresql/ca.crt
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./init-extensions.sql:/docker-entrypoint-initdb.d/init-extensions.sql
+    ports:
+      - "5432:5432"
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    networks:
+      - mi_red
+
+  rust_app:  
+    build: .
+    container_name: rust_microservice
+    depends_on:  
+      - postgres
+    environment:
+      DATABASE_URL: postgres://mi_usuario:mi_contrasena@postgres_ssl:5432/mi_basedatos
+      CA_CERT_PATH: /app/certs/ca.crt  
+    volumes:
+      - ./certs/ca.crt:/app/certs/ca.crt
+    networks:
+      - mi_red
+
+networks:
+  mi_red:
+    driver: bridge
